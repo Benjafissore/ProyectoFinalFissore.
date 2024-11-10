@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(43, 50, 58);
+}
+
+aside{
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header h1{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.boton-menu.active{
+    background-color: rgb(231, 230, 230);
+    color: rgb(27, 75, 27);
+    width: 100%;
+    border-radius: 1rem;
+}    
+
+.boton-carrito{
+    color: white;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+
+.texto-footer{
+    color: white;
+}
+
+
+main{
+    margin: 2rem;
+    background-color: rgb(231, 230, 230);
+    padding: 2rem;
+    border-radius: 2rem;
+    height: 1800px; 
+}
+
+main h2{
+    padding-left: 3rem;
+}
+
+.contenedor-productos{
+    display: grid;
+    grid-template-columns:22% 22% 22% 22%;
+    grid-template-rows: 300px 300px;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+main img{
+    height: 70%;
+    border-radius: 1rem;
+}
+
+.producto-detalles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(57, 54, 54);
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.producto-boton{
+    border: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    text-transform: uppercase; 
+    width: 95%;
+    padding: .1rem;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.producto-boton:hover{
+    background-color: rgb(209, 205, 205);
+}
