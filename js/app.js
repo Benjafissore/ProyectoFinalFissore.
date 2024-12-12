@@ -1,12 +1,3 @@
-let preguntaImportante = prompt("Sos hincha de Banfiel?");
-
-if (preguntaImportante == "si") {
-    alert("Felicitaciones, obtienes descuentos especiales");
-}
-else {
-    alert("Que lastima")
-}
-
 let preciosEnCarrito = [25000, 20000, 26000, 27000, 22000, 23000, 23000];
 
 function calcularTotal() {
@@ -46,3 +37,22 @@ productos.forEach(producto => {
     console.log(producto.obtenerDescripcion());
 });
 
+const contenedorProductos = document.querySelector(".contenedor-productos");
+
+function renderizarProductos(){
+    productos.forEach(producto => {
+        const productosHTML = `
+            <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombreProducto}">
+                    <div class="producto-detalles">
+                        <h3 class="producto-titulo">${producto.nombreProducto}</h3>
+                        <p class="producto-precio">$${producto.precio}</p>
+                        <button class="producto-boton" data-id="${producto.id}">agregar</button>
+                    </div>
+                </div>
+            `;
+        contenedorProductos.innerHTML += productosHTML;
+    }); 
+}
+
+renderizarProductos();
