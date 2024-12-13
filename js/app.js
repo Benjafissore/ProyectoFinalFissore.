@@ -37,7 +37,9 @@ productos.forEach(producto => {
     console.log(producto.obtenerDescripcion());
 });
 
+const carrito = [];
 const contenedorProductos = document.querySelector(".contenedor-productos");
+const numeritoCarrito = document.querySelector(".numerito");
 
 function renderizarProductos(){
     productos.forEach(producto => {
@@ -53,6 +55,32 @@ function renderizarProductos(){
             `;
         contenedorProductos.innerHTML += productosHTML;
     }); 
+    agregarEventosBotones();
+}
+
+function agregarEventosBotones() {
+    const botonesAgregar = document.querySelectorAll(".producto-boton");
+    
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", (e) => {
+            const idProducto = parseInt(e.target.dataset.id);
+            agregarAlCarrito(idProducto);
+        })
+    })
+}
+
+function agregarAlCarrito(idProducto) {
+    const productoEncontrado = productos.find(producto => producto.id === idProducto);
+
+    if (productoEncontrado) {
+        carrito.push(productoEncontrado);
+        actualizarCarrito();
+    }
+}
+
+function actualizarCarrito(){
+    numeritoCarrito.textContent = carrito.length;
+    console.log("Carrito actual:", carrito);
 }
 
 renderizarProductos();

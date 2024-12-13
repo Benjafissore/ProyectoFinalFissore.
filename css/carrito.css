@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Jost", serif;
+    font-optical-sizing: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(43, 50, 58);
+}
+
+aside{
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header h1{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.boton-carrito.active{
+    background-color: rgb(231, 230, 230);
+    color: rgb(27, 75, 27);
+    width: 100%;
+    border-radius: 1rem;
+}    
+
+.boton-carrito{
+    color: rgb(43, 38, 38);
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.texto-footer{
+    color: white;
+}
+
+
+main{
+    margin: 2rem;
+    background-color: rgb(231, 230, 230);
+    padding: 2rem;
+    border-radius: 2rem;
+    height: 600px; 
+}
+
+main h2{
+    padding-left: 3rem;
+}
+
