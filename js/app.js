@@ -37,7 +37,7 @@ productos.forEach(producto => {
     console.log(producto.obtenerDescripcion());
 });
 
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 const contenedorProductos = document.querySelector(".contenedor-productos");
 const numeritoCarrito = document.querySelector(".numerito");
 
@@ -75,12 +75,18 @@ function agregarAlCarrito(idProducto) {
     if (productoEncontrado) {
         carrito.push(productoEncontrado);
         actualizarCarrito();
+        guardarCarritoEnStorage();
     }
 }
 
 function actualizarCarrito(){
     numeritoCarrito.textContent = carrito.length;
     console.log("Carrito actual:", carrito);
+}
+
+function guardarCarritoEnStorage () {
+    console.log("Guardando en Storage:", carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 renderizarProductos();
