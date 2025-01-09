@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "imagen": "./img/argentina-1985-1.jpg",
+        "nombreProducto": "Los pumas",
+        "precio": 25000
+    },
+    {
+        "id": 2,
+        "imagen": "./img/england-1980-1-500x500.jpg.webp",
+        "nombreProducto": "Inglaterra",
+        "precio": 20000
+    },
+    {
+        "id": 3,
+        "imagen": "./img/rugby017-new-zealand-1980-retrorugby.jpg",
+        "nombreProducto": "All blacks",
+        "precio": 26000
+    },
+    {
+        "id": 4,
+        "imagen": "./img/SaffaTeesSpringbokRugbyShirtProduct.webp",
+        "nombreProducto": "Springbok",
+        "precio": 27000
+    },
+    {
+        "id": 5,
+        "imagen": "./img/Polo_Rugby_Irlanda_Retrorugby.jpg",
+        "nombreProducto": "Irlanda",
+        "precio": 22000
+    },
+    {
+        "id": 6,
+        "imagen": "./img/rugby_007_scotland_retrorugby.jpg",
+        "nombreProducto": "Escocia",
+        "precio": 23000
+    },
+    {
+        "id": 7,
+        "imagen": "./img/rugby_023_italy_1975_retrorugby.jpg",
+        "nombreProducto": "Italia",
+        "precio": 23000
+    }
+]

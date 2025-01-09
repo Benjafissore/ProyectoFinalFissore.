@@ -1,15 +1,3 @@
-let preciosEnCarrito = [25000, 20000, 26000, 27000, 22000, 23000, 23000];
-
-function calcularTotal() {
-    let total = 0;
-    for (let i = 0; i < preciosEnCarrito.length; i++) {
-        total += preciosEnCarrito[i];
-    }
-    return total;
-}
-console.log("El total del carrito es:$" + calcularTotal());
-
-
 class Producto {
     constructor(id, imagen, nombreProducto, precio) {
         this.id = id;
@@ -21,7 +9,6 @@ class Producto {
         return `${this.nombreProducto} cuesta $${this.precio}`;
     }
 }
-
 
 const productos = [
     new Producto(1, "./img/argentina-1985-1.jpg", "Los pumas", 25000),
